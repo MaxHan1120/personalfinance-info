@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PersonalFinance 如何存取、使用、保存與處理 Gmail 帳單及個人記帳資料。">
+  <title>隱私權政策｜PersonalFinance</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./">PersonalFinance<span>個人本機記帳工具</span></a><nav aria-label="主要導覽"><a href="./">介紹</a><a href="privacy.html" aria-current="page">隱私政策</a><a href="terms.html">使用條款</a></nav></header>
+  <main class="document">
+    <p class="eyebrow">PRIVACY</p><h1>隱私權政策</h1>
+    <p class="muted">更新日期：2026 年 10 月 30 日</p>
+    <p>本政策說明 PersonalFinance 個人本機記帳工具及此說明網站的資料處理方式。目前工具僅供個人使用與測試，不是公開的線上記帳服務。</p>
+    <section><h2>1. 存取哪些 Google 資料</h2>
+      <p>使用者自行完成 Google OAuth 2.0 授權後，工具透過 Gmail API 搜尋指定銀行寄件者與 PDF 附件，讀取符合條件郵件的寄件者、主旨、日期、郵件與附件識別資訊，以及帳單附件。連線驗證會讀取授權帳號的電子郵件地址，以確認使用的是正確信箱。</p>
+      <p>所要求的 <code>gmail.readonly</code> 是整個信箱的唯讀權限，不是 Google 提供的銀行專屬權限；程式使用查詢條件限制實際處理範圍。工具不要求寄送、修改或刪除郵件的權限。</p>
+    </section>
+    <section><h2>2. 資料如何使用</h2>
+      <p>資料僅用於使用者要求的電子帳單辨識、下載、交易解析、分類、去重、Excel 記帳與帳務核對。每日消費通知保留為待核對資料，月結交易核對後才進入測試帳本。</p>
+      <p>Google 使用者資料不作廣告、出售或模型訓練用途。PersonalFinance 對 Google API 資料的使用及傳輸遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括 Limited Use 要求。</p>
+    </section>
+    <section><h2>3. 資料保存在何處</h2>
+      <p>原始加密 PDF、解析報告、來源索引、SQLite 同步狀態、日誌、備份及 Excel 輸出保存在使用者的 Windows 本機。OAuth Refresh Token 與 PDF 解密密碼保存在該使用者的 Windows 認證管理員；執行時所需的 Access Token 及解密密碼在記憶體中使用。</p>
+      <p>密碼及 Token 不寫入本網站、記帳程式原始碼或同步日誌。本網站的公開儲存庫只含說明頁面與樣式，不含帳單、憑證或記帳程式。</p>
+    </section>
+    <section><h2>4. 資料分享與網路服務</h2>
+      <p>本機工具透過 Google OAuth 及 Gmail API 取得授權與帳單，沒有將郵件、帳單或交易上傳到此說明網站、廣告服務、第三方分析服務或付費 AI API 的功能。</p>
+      <p>使用者自行把檔案分享給其他人、另行備份至雲端，或將資料交給其他工具，不是本說明網站的操作。</p>
+    </section>
+    <section><h2>5. 保留、撤回與刪除</h2>
+      <p>本機資料與備份會保留，直到使用者自行管理或刪除；目前工具不自動刪除原始帳單。使用者可隨時停止工具，並於 <a href="https://myaccount.google.com/connections">Google 帳戶的第三方連線設定</a>撤回授權。</p>
+      <p>撤回 Google 授權不會自動刪除既有本機檔案、備份或 Windows 認證管理員項目。這些內容由使用者在自己的電腦管理；此網站沒有帳戶、資料儲存服務或遠端刪除介面。</p>
+    </section>
+    <section><h2>6. 本網站的代管服務</h2>
+      <p>此說明網站使用 GitHub Pages 代管。網站沒有加入分析追蹤程式、廣告、登入功能、聯絡表單或檔案上傳功能，也不要求輸入任何密碼或驗證碼。</p>
+      <p>依 GitHub 的說明，GitHub Pages 會基於安全目的記錄及保存網站訪客的 IP 位址。此類代管服務紀錄由 GitHub 處理，請參閱 <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages 資料收集說明</a>及 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隱私聲明</a>。</p>
+    </section>
+    <section><h2>7. 聯絡與政策更新</h2>
+      <p>此工具由個人維護。問題可透過 OAuth 同意畫面所列的支援電子郵件，或本網站 <a href="https://github.com/MaxHan1120/personalfinance-info/issues">GitHub 儲存庫的公開議題</a>提出。請只描述工具問題，不在公開議題提供帳單、交易明細、私人聯絡資訊、Token、密碼或驗證碼。</p>
+      <p>工具資料處理方式變更時，會同步更新本政策及頁首日期。</p>
+    </section>
+  </main>
+  <footer><span>PersonalFinance · 個人使用</span><div><a href="./">工具介紹</a><a href="terms.html">使用條款</a></div></footer>
+</body>
+</html>
